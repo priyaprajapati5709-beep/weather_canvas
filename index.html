@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Weather Canvas </title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="antialiased">
+
+<div class="app">
+
+<header class="header">
+
+<h1>Weather Canvas</h1>
+
+</header>
+
+
+<main class="layout">
+
+<!-- SEARCH -->
+<section class="card search-card">
+
+<div class="input-group">
+
+<input id="cityInput"
+placeholder="Search city">
+
+<button id="searchBtn"
+class="btn primary">
+
+Search
+
+</button>
+
+</div>
+
+<button id="locationBtn"
+class="btn success">
+
+Use Current Location
+
+</button>
+
+<select id="recentCities"
+class="dropdown hidden">
+
+</select>
+
+<div id="errorBox"
+class="error hidden">
+
+</div>
+
+</section>
+
+
+<!-- CURRENT WEATHER -->
+<section class="card weather-card">
+
+<h2 id="cityTitleWrapper">
+  <span id="cityName">Search a city</span>
+  <button id="copyCity" class="btn ghost">Copy city</button>
+</h2>
+
+<div id="timezoneInfo">Local time: -- | Timezone: --</div>
+
+<div class="weather-data">
+
+<div class="weather-item">
+
+<p class="label">Temperature</p>
+
+<div class="temp">
+
+<span id="temp">--</span>
+
+<span class="unit">°C</span>
+
+</div>
+
+<button id="unitToggle"
+class="btn ghost">
+
+Switch °F
+
+</button>
+
+</div>
+
+<div id="aiBox" class="ai-card">
+<span class="label">Quick Forecast Tip</span>
+<p id="aiText">Search a city to get a weather summary.</p>
+</div>
+
+<div id="alerts" class="hidden">No active alerts.</div>
+
+
+<div class="weather-item">
+
+<p class="label">Humidity</p>
+
+<p id="humidity">--</p>
+
+</div>
+
+
+<div class="weather-item">
+
+<p class="label">Wind</p>
+
+<p id="wind">--</p>
+
+</div>
+
+
+<div class="weather-item">
+
+<p class="label">Pressure</p>
+
+<p id="pressure">--</p>
+
+</div>
+
+
+<div class="weather-item">
+
+<p class="label">Visibility</p>
+
+<p id="visibility">--</p>
+
+</div>
+
+
+<div class="weather-item">
+
+<p class="label">Sunrise</p>
+
+<p id="sunrise">--</p>
+
+</div>
+
+
+<div class="weather-item">
+
+<p class="label">Sunset</p>
+
+<p id="sunset">--</p>
+
+</div>
+
+
+<div class="weather-item">
+
+<p class="label">Condition</p>
+
+<img id="weatherIcon"
+class="weather-icon"
+alt="weather icon">
+
+</div>
+
+
+<div class="aqi-card">
+
+<p>AQI</p>
+
+<p id="aqi">--</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FORECAST -->
+<section class="forecast-section">
+
+<h2>5 Day Forecast</h2>
+
+<div id="forecast"
+class="forecast">
+
+<div id="emptyState"
+class="empty">
+
+Search a city
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DAY DETAILS -->
+<section class="forecast-section">
+
+<h2>Day Details</h2>
+
+<div id="dayDetails"
+class="detailCard">
+
+Click a forecast day
+
+</div>
+
+</section>
+
+
+
+
+</div>
+
+
+<!-- EFFECTS -->
+<div id="rain"
+class="rain hidden">
+
+</div>
+
+
+<!-- LOADER -->
+<div id="loader"
+class="loader hidden">
+
+<div class="spinner"></div>
+
+<p>
+
+Loading weather data...
+
+</p>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
